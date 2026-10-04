@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Darsh's Recipe Book</title>
+<title>Cookbook</title>
 <meta name="description" content="Tap a recipe to open the full guide and ingredient list.">
 <meta name="theme-color" content="#501c6e">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -442,7 +442,7 @@ function homeView() {
     <header>
       <div class="top">
         <div class="appicon">${icon('utensils-crossed', 28)}</div>
-        <div class="top-text"><p class="eyebrow">My kitchen</p><h1>Darsh's Recipe Book</h1></div>
+        <div class="top-text"><p class="eyebrow">My kitchen</p><h1>Cookbook</h1></div>
         ${themeButton()}
       </div>
       <p class="lead">Tap a recipe to open the full guide and ingredient list.</p>
@@ -490,7 +490,7 @@ function render() {
   const focusId = document.activeElement && document.activeElement.id;
   const scroll = window.scrollY;
   app.innerHTML = r ? detailView(r) : homeView();
-  document.title = r ? `${r.title} · Darsh's Recipe Book` : "Darsh's Recipe Book";
+  document.title = r ? `${r.title} · Cookbook` : "Cookbook";
   if (focusId === 'q') { const el = document.getElementById('q'); el.focus(); el.setSelectionRange(el.value.length, el.value.length); }
   window.scrollTo(0, scroll);
 }
